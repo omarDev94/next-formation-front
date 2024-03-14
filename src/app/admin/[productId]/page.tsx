@@ -1,10 +1,8 @@
-import { PageProps } from "@/.next/types/app/page";
-import { fetchFakeStore } from "@/app/lib/fakeStoreApiService";
-
-import ProductDetails from "@/app/ui/product/ProductDetails";
-import ProductRating from "@/app/ui/product/ProductRating";
-import { ErrorBoundary } from "next/dist/client/components/error-boundary";
+import ProductDetails from "@/app/components/product/ProductDetails";
+import ProductRating from "@/app/components/product/ProductRating";
 import { Suspense } from "react";
+import { PageProps } from "../../../../.next/types/app/page";
+
 
 const Product = ({ params: { id } }: PageProps) => {
   return (

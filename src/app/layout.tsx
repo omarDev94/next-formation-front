@@ -18,10 +18,12 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <body className={inter.className}>
       <header> 
         <h1>Next Formation</h1> 
       </header>
-      <body className={inter.className}>{children}</body>
+        {children}
+        </body>
     </html>
   );
 }

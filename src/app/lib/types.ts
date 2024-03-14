@@ -1,9 +1,9 @@
-type Rating = {
+export type Rating = {
     rate: number, 
     count: number
 }
 
-interface Product {
+export interface Product {
     id: number, 
     title: string, 
     price: number,
@@ -13,8 +13,4 @@ interface Product {
     rating: Rating
 }
 
-type Products = Product[]
-
-/* interface PageProps {
-    id: string
-} */
+export type Products = Product[]

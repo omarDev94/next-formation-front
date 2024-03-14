@@ -1,13 +1,13 @@
 // "use client"
-
-import { useEffect, useState } from "react"
-import Product from "../components/product/Product"
+import { CSSProperties } from "react";
 import { fetchFakeStore } from "../lib/fakeStoreApiService"
+import { Products } from "../lib/types";
+import Link from "next/link";
 
-const listStyle = {
+const listStyle: CSSProperties = {
     display: "flex",
     flexDirection: "column",
-    alignItems: "center",
+    alignItems: "center"
 }
 
 export default async function Admin() {
@@ -19,7 +19,9 @@ export default async function Admin() {
             <h1>Admin Page</h1>
             <ul style={listStyle}>
                 {products && products.map(product =>
-                    <Product key={product.id} product={product} />
+                    <li key={product.id}>
+                        <Link href={`/admin/${product.id}`}>{product.title}</Link>
+                    </li>
                 )}
             </ul>;
         </>
