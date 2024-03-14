@@ -14,8 +14,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  
+
   return (
     <html lang="en">
+      <header> 
+        <h1>Next Formation</h1> 
+      </header>
       <body className={inter.className}>{children}</body>
     </html>
   );
